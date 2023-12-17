@@ -24,6 +24,9 @@ wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --ac
 wp language core install pt_BR
 wp site switch-language pt_BR
 wp option update timezone_string 'America/Sao_Paulo'
+wp post create --post_type=page --post_title='Home' --post_status=publish
+wp option update show_on_front page
+wp option update page_on_front 5
 ```
 
 ## Cleanup
