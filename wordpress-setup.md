@@ -5,8 +5,11 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 ## Prerequisites
 - [Node.js](https://nodejs.org/)
 - [Homebrew (brew)](https://brew.sh/)
+- [Yarn](https://yarnpkg.com/)
+- [Gulp](https://gulpjs.com/)
 - [WP-CLI](https://wp-cli.org/)
 - [PHP (brew)](https://formulae.brew.sh/formula/php)
+
 
 ## Plugin Installation
 To install the required plugins, execute the following command:
@@ -24,7 +27,7 @@ wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --ac
 Remove unnecessary files (e.g., Git repository) with the following command:
 ```bash
 rm -rf wp-config-sample.php readme.html license.txt
-rm -rf wp-content/themes/[THEME-NAME]/.git
+rm -rf wp-content/themes/wp-theme/.git
 ```
 
 ## Dependency Installation
