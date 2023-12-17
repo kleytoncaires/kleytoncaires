@@ -21,14 +21,23 @@ wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=dow
 Install the theme using the following command:
 ```bash
 wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
-wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
+wp language core install pt_BR
+wp site switch-language pt_BR
+wp option update timezone_string 'America/Sao_Paulo'
 ```
 
 ## Cleanup
 Remove unnecessary files (e.g., Git repository) with the following command:
 ```bash
+wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 rm -rf wp-config-sample.php readme.html license.txt
 rm -rf wp-content/themes/wp-theme/.git
+```
+
+## Run Project in VSCode
+```bash
+cd wp-content/themes/wp-theme
+code .
 ```
 
 ## Dependency Installation
