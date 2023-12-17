@@ -21,6 +21,7 @@ wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=dow
 Install the theme using the following command:
 ```bash
 wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
+wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 ```
 
 ## Cleanup
