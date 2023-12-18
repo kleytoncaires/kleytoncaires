@@ -18,7 +18,6 @@ Install the theme and configure basic settings:
 wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
 
 # Set up language and timezone
-
 wp language core install pt_BR
 wp site switch-language pt_BR
 wp option update timezone_string 'America/Sao_Paulo'
