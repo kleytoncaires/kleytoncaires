@@ -13,20 +13,17 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 ## Theme Installation
 Install the theme and configure basic settings:
 
-### Install the theme
-```bash
+```sh
+# Install the theme
 wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
-```
 
-### Set up language and timezone
-```bash
+# Set up language and timezone
+
 wp language core install pt_BR
 wp site switch-language pt_BR
 wp option update timezone_string 'America/Sao_Paulo'
-```
 
-### Create a homepage
-```bash
+# Create a homepage
 wp post create --post_type=page --post_title='Home' --post_status=publish
 wp option update show_on_front page
 wp option update page_on_front 5
@@ -35,50 +32,45 @@ wp option update page_on_front 5
 ## Plugin Installation
 To install the required plugins, execute the following command:
 
-### Install and activate plugins
-```bash
-wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui svg-support wordpress-seo wp-mail-smtp wp-migrate-db --activate
-```
 
-### Install Advanced Custom Fields Pro
-```bash
+```sh
+# Install and activate plugins
+wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui svg-support wordpress-seo wp-mail-smtp wp-migrate-db --activate
+
+# Install Advanced Custom Fields Pro
 wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9Nzg5MDd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE2LTA0LTA1IDEzOjQwOjQw" --activate
 ```
 
 ## Cleanup
 Remove unnecessary files and themes:
 
+```sh
 ### Remove unnecessary files
-```bash
 wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 rm -rf wp-config-sample.php readme.html license.txt
-```
 
-### Rename the theme folder (replace 'theme-name' with the desired name)
-```bash
+# Rename the theme folder (replace 'theme-name' with the desired name)
 mv wp-content/themes/wp-theme wp-content/themes/theme-name
-```
 
-### Remove the Git repository from the theme folder
-```bash
+# Remove the Git repository from the theme folder
 rm -rf wp-content/themes/theme-name/.git
 ```
 
 ## Run Project in VSCode
-```bash
+```sh
 cd wp-content/themes/theme-name
 code .
 ```
 
 ## Dependency Installation
 Install project dependencies using Yarn:
-```bash
+```sh
 yarn add @fancyapps/ui @fortawesome/fontawesome-free bootstrap jquery jquery-mask-plugin popper.js swiper --save
 ```
 
 ## Task Execution
 Execute tasks using Yarn:
-```
+```sh
 yarn start
 ```
 
