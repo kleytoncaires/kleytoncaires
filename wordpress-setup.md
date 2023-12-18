@@ -10,23 +10,33 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 - [WP-CLI](https://wp-cli.org/)
 - [PHP (brew)](https://formulae.brew.sh/formula/php)
 
+## Theme Installation
+Install the theme and configure basic settings:
+
+### Install the theme
+```bash
+wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
+```
+
+### Set up language and timezone
+```bash
+wp language core install pt_BR
+wp site switch-language pt_BR
+wp option update timezone_string 'America/Sao_Paulo'
+```
+
+### Create a homepage
+```bash
+wp post create --post_type=page --post_title='Home' --post_status=publish
+wp option update show_on_front page
+wp option update page_on_front 5
+```
 
 ## Plugin Installation
 To install the required plugins, execute the following command:
 ```bash
 wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui svg-support wordpress-seo wp-mail-smtp wp-migrate-db --activate
 wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9Nzg5MDd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE2LTA0LTA1IDEzOjQwOjQw" --activate
-```
-## Theme Installation
-Install the theme using the following command:
-```bash
-wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip --activate
-wp language core install pt_BR
-wp site switch-language pt_BR
-wp option update timezone_string 'America/Sao_Paulo'
-wp post create --post_type=page --post_title='Home' --post_status=publish
-wp option update show_on_front page
-wp option update page_on_front 5
 ```
 
 ## Cleanup
