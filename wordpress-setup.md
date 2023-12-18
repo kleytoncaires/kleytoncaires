@@ -44,7 +44,7 @@ wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=dow
 Remove unnecessary files and themes:
 
 ```sh
-### Remove unnecessary files
+# Remove unnecessary files
 wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 rm -rf wp-config-sample.php readme.html license.txt
 
