@@ -6,13 +6,10 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 - [Node.js](https://nodejs.org/)
 - [Yarn](https://yarnpkg.com/)
 - [Gulp](https://gulpjs.com/)
-- [Homebrew (brew)](https://brew.sh/)
 - [WP-CLI](https://wp-cli.org/)
-- [PHP (brew)](https://formulae.brew.sh/formula/php)
 
 ## Plugin Installation
 To install the required plugins, execute the following command:
-
 
 ```sh
 # Install and activate plugins
@@ -47,25 +44,37 @@ rm -rf wp-config-sample.php readme.html license.txt
 
 # Set up language and timezone
 ```sh
+# Install Portuguese (Brazil) language
 wp language core install pt_BR
-wp site switch-language pt_BR
-wp option update timezone_string 'America/Sao_Paulo'
 
+# Switch site language to Portuguese (Brazil)
+wp site switch-language pt_BR
+
+# Set timezone to 'America/Sao_Paulo'
+wp option update timezone_string 'America/Sao_Paulo'
+```
+
+# Create Homepage and Configure Front Page
+
+# Create a homepage
+```sh
 # Create a homepage
 wp post create --post_type=page --post_title='Home' --post_status=publish
 
-# Set the show_on_front option to 'page'
+# Set the front page to display a static page
 wp option update show_on_front page
 
 # Get the ID of the newly created page
 wp post list --post_type=page --field=ID --home
 
-# Update the page_on_front option with the ID of the homepage (Make sure to replace [ID] with the ID of the page obtained in previous step)
+# Update the page_on_front option with the ID of the homepage
+# (Make sure to replace [ID] with the ID of the page obtained in the previous step)
 wp option update page_on_front [ID]
 ```
 
 ## Run Project in VSCode
 ```sh
+# (Make sure to replace [theme-name]
 cd wp-content/themes/theme-name
 code .
 ```
