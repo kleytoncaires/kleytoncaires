@@ -72,7 +72,7 @@ wp option update page_on_front [ID]
 
 ## Run Project in VSCode
 ```sh
-# (Make sure to replace [theme-name]
+# Make sure to replace [theme-name]
 cd wp-content/themes/theme-name
 code .
 ```
