@@ -34,6 +34,7 @@ mv wp-content/themes/wp-theme wp-content/themes/theme-name
 
 # Activate the theme (replace 'theme-name' with the desired name)
 wp theme activate theme-name
+```
 
 ## Cleanup
 Remove unnecessary files and themes:
