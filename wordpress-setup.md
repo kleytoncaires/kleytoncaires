@@ -46,6 +46,7 @@ rm -rf wp-config-sample.php readme.html license.txt
 ```
 
 # Set up language and timezone
+```sh
 wp language core install pt_BR
 wp site switch-language pt_BR
 wp option update timezone_string 'America/Sao_Paulo'
