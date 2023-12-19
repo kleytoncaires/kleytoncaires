@@ -24,8 +24,15 @@ wp option update timezone_string 'America/Sao_Paulo'
 
 # Create a homepage
 wp post create --post_type=page --post_title='Home' --post_status=publish
+
+# Set the show_on_front option to 'page'
 wp option update show_on_front page
-wp option update page_on_front 5
+
+# Get the ID of the newly created page
+wp post list --post_type=page --field=ID --home
+
+# Update the page_on_front option with the ID of the homepage (Make sure to replace [ID] with the ID of the page obtained in previous step)
+wp option update page_on_front [ID]
 ```
 
 ## Plugin Installation
