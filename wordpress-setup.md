@@ -55,8 +55,6 @@ wp option update timezone_string 'America/Sao_Paulo'
 ```
 
 # Create Homepage and Configure Front Page
-
-# Create a homepage
 ```sh
 # Create a homepage
 wp post create --post_type=page --post_title='Home' --post_status=publish
