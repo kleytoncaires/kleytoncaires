@@ -9,8 +9,6 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 - [WP-CLI](https://wp-cli.org/)
 
 ## Plugin Installation
-To install the required plugins, execute the following command:
-
 ```sh
 # Install and activate plugins
 wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui svg-support wordpress-seo wp-mail-smtp wp-migrate-db --activate
@@ -20,8 +18,6 @@ wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=dow
 ```
 
 ## Theme Installation
-Install the theme and configure basic settings:
-
 ```sh
 # Install the theme
 wp theme install https://github.com/kleytoncaires/wp-theme/archive/main.zip
@@ -34,10 +30,8 @@ wp theme activate theme-name
 ```
 
 ## Cleanup
-Remove unnecessary files and themes:
-
 ```sh
-# Remove unnecessary files
+# Remove unnecessary files and themes
 wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 rm -rf wp-config-sample.php readme.html license.txt
 ```
@@ -78,14 +72,14 @@ code .
 ```
 
 ## Dependency Installation
-Install project dependencies using Yarn:
 ```sh
+# Install project dependencies using Yarn:
 yarn add @fancyapps/ui @fortawesome/fontawesome-free bootstrap jquery jquery-mask-plugin popper.js swiper --save
 ```
 
 ## Task Execution
-Execute tasks using Yarn:
 ```sh
+# Execute tasks using Yarn:
 yarn start
 ```
 
