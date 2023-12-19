@@ -42,7 +42,7 @@ wp theme delete twentytwentytwo twentytwentythree twentytwentyfour
 rm -rf wp-config-sample.php readme.html license.txt
 ```
 
-# Set up language and timezone
+## Set up language and timezone
 ```sh
 # Install Portuguese (Brazil) language
 wp language core install pt_BR
@@ -54,7 +54,7 @@ wp site switch-language pt_BR
 wp option update timezone_string 'America/Sao_Paulo'
 ```
 
-# Create Homepage and Configure Front Page
+## Create Homepage and Configure Front Page
 ```sh
 # Create a homepage
 wp post create --post_type=page --post_title='Home' --post_status=publish
