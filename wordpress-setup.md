@@ -11,7 +11,7 @@ This guide outlines the necessary steps to set up and configure the WordPress en
 ## Plugin Installation
 ```sh
 # Install and activate plugins
-wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui svg-support wordpress-seo wp-mail-smtp wp-migrate-db --activate
+wp plugin install contact-form-7 contact-form-cfdb7 tinymce-advanced custom-post-type-ui wordpress-seo wp-mail-smtp wp-migrate-db --activate
 
 # Install Advanced Custom Fields Pro
 wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9Nzg5MDd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE2LTA0LTA1IDEzOjQwOjQw" --activate
