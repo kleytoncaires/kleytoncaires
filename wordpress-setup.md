@@ -73,6 +73,9 @@ code .
 
 ## Dependency Installation
 ```sh
+# Install gulp dependencies using Yarn:
+yarn
+
 # Install project dependencies using Yarn:
 yarn add @fancyapps/ui @fortawesome/fontawesome-free bootstrap jquery jquery-mask-plugin popper.js swiper --save
 ```
